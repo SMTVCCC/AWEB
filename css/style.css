@@ -550,6 +550,110 @@ footer {
     opacity: 0.8;
 }
 
+/* 移动端适配 */
+@media (max-width: 768px) {
+    /* 调整主横幅高度 */
+    .hero {
+        height: 400px;
+    }
+
+    /* 调整主横幅内容布局 */
+    .slide .content {
+        margin-left: 20px;
+        max-width: 100%;
+    }
+
+    .slide .content h2 {
+        font-size: 2rem;
+    }
+
+    .slide .content p {
+        font-size: 1rem;
+    }
+
+    /* 调整快速链接布局 */
+    .quick-links .container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    /* 调整新闻网格布局 */
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* 调整学术项目布局 */
+    .programs-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* 调整数据统计布局 */
+    .stats .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* 调整校园风光布局 */
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* 小屏幕手机适配 */
+@media (max-width: 480px) {
+    /* 进一步优化布局 */
+    .quick-links .container {
+        grid-template-columns: 1fr;
+    }
+
+    .stats .container {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* 调整按钮大小 */
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    /* 调整字体大小 */
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+
+    .section-header p {
+        font-size: 1rem;
+    }
+}
+
+/* 添加触摸设备支持 */
+@media (hover: none) {
+    .link-box:hover,
+    .news-card:hover,
+    .program-card:hover {
+        transform: none;
+    }
+
+    .news-card:hover .news-img img,
+    .program-card:hover .program-img img {
+        transform: none;
+    }
+}
+
+.footer-bottom {
+    background-color: #1a0229;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-bottom p {
+    margin: 0;
+    opacity: 0.8;
+}
+
 @media (max-width: 768px) {
     .footer-top .container {
         grid-template-columns: repeat(2, 1fr);
