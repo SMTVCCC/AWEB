@@ -545,56 +545,123 @@ footer {
     text-align: center;
 }
 
+.footer-bottom .disclaimer {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.9rem;
+    opacity: 0.7;
+    text-align: center;
+}
+
+.footer-bottom .disclaimer p {
+    margin-bottom: 8px;
+}
+
 .footer-bottom p {
     margin: 0;
     opacity: 0.8;
 }
 
-/* 移动端适配 */
+/* 移动端简洁版样式 */
 @media (max-width: 768px) {
-    /* 调整主横幅高度 */
-    .hero {
-        height: 400px;
+    /* 隐藏非必要元素 */
+    .top-bar,
+    .controls,
+    .indicators,
+    .quick-links,
+    .campus-gallery,
+    .stats {
+        display: none;
     }
 
-    /* 调整主横幅内容布局 */
+    /* 简化导航栏 */
+    .main-header {
+        padding: 10px 0;
+    }
+
+    .logo img {
+        height: 40px;
+    }
+
+    .logo h1 {
+        font-size: 1.5rem;
+    }
+
+    /* 简化主横幅 */
+    .hero {
+        height: 300px;
+    }
+
     .slide .content {
-        margin-left: 20px;
-        max-width: 100%;
+        margin-left: 0;
+        padding: 0 15px;
+        text-align: center;
     }
 
     .slide .content h2 {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
-    .slide .content p {
-        font-size: 1rem;
+    /* 简化新闻卡片 */
+    .news-card {
+        margin-bottom: 20px;
     }
 
-    /* 调整快速链接布局 */
-    .quick-links .container {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
+    .news-img {
+        height: 150px;
     }
 
-    /* 调整新闻网格布局 */
-    .news-grid {
+    .news-content {
+        padding: 15px;
+    }
+
+    .news-content h3 {
+        font-size: 1.2rem;
+    }
+
+    /* 简化底部区域 */
+    footer {
+        padding-top: 30px;
+    }
+
+    .footer-top .container {
         grid-template-columns: 1fr;
+        gap: 20px;
     }
 
-    /* 调整学术项目布局 */
+    .footer-col {
+        text-align: center;
+    }
+
+    .footer-col h3:after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+/* 超小屏幕设备优化 */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    .section-header {
+        margin-bottom: 30px;
+    }
+
+    .section-header h2 {
+        font-size: 1.5rem;
+        padding-bottom: 10px;
+    }
+
+    section {
+        padding: 40px 0;
+    }
+
+    .news-grid,
     .programs-grid {
-        grid-template-columns: 1fr;
-    }
-
-    /* 调整数据统计布局 */
-    .stats .container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    /* 调整校园风光布局 */
-    .gallery-grid {
-        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
     }
 }
 
